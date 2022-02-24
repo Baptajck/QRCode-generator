@@ -2,7 +2,6 @@
 
 .home {
 	.card {
-		// position: relative;
 		background-color: #fff;
 		padding: 1em;
 		border-radius: 15px;
@@ -59,14 +58,6 @@
 			height: 22em;
 			right: -8rem;
 			top: 14rem;
-		}
-	}
-}
-
-@media screen and (min-width: 1000px) {
-	.home {
-		.card {
-			max-height: 440px;
 		}
 	}
 }
