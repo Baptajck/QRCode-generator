@@ -1,8 +1,11 @@
 @import '../../styles/variables.scss';
 
 .input {
-	margin: 2em auto;
+	margin: 1em auto;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	letter-spacing: 1px;
 
 	.label {
@@ -13,13 +16,15 @@
 	}
 
 	.item {
+		all: unset;
+		height: 20px;
+		padding: 0.3em;
 		background-color: #fff;
 		border: none;
-		padding: 0.5em;
+		// padding: 0.5em;
 		border-radius: 5px;
-		margin-top: 0.3em;
 		color: $grayish_blue;
-		width: calc(100% - 1em);
+		width: 100px;
 
 		&:focus {
 			outline: none;

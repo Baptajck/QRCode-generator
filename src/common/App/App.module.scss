@@ -4,5 +4,11 @@
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	padding: 0 0.5em;
+	// margin-top: 1em;
+}
+
+@media screen and (min-width: 1000px) {
+	.app {
+		margin: 0;
+	}
 }

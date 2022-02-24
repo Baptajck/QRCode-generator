@@ -1,6 +1,11 @@
 @import '../../styles/variables.scss';
 
 .home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 	.card {
 		background-color: #fff;
 		padding: 1em;
@@ -36,7 +41,6 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 15px;
-		background-color: $blue;
 		position: relative;
 		overflow: hidden;
 
@@ -58,6 +62,16 @@
 			height: 22em;
 			right: -8rem;
 			top: 14rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.home {
+		flex-direction: row;
+
+		.change {
+			margin-left: 3em;
 		}
 	}
 }

@@ -1,21 +1,26 @@
 import s from './Home.module.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import QRCode from 'react-qr-code';
 
 import Input from '../../components/Input/Input';
+import InputColor from '../../components/InputColor/InputColor';
+
 const Home = () => {
 	const [value, setValue] = useState('');
+	const [bgcColor, setBgcColor] = useState('#2b7dfa');
+	const [qrCodeColor, setQrCodeColor] = useState('#ffffff');
 
 	return (
 		<div className={s.home}>
 			<div className={s.card}>
-				<div className={s.qrCode}>
+				<div className={s.qrCode} style={{ backgroundColor: bgcColor }}>
 					<QRCode
 						value={value}
 						size={200}
-						bgColor='#2b7dfa'
+						bgColor={bgcColor}
+						fgColor={qrCodeColor}
 						level='H'
-						fgColor='#fff'
+						title={value}
 					/>
 				</div>
 				<div className={s.text}>
@@ -28,7 +33,19 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<Input value={value} callback={setValue} />
+			<div className={s.change}>
+				<Input value={value} callback={setValue} />
+				<InputColor
+					label='Change background color'
+					color={bgcColor}
+					callback={setBgcColor}
+				/>
+				<InputColor
+					label='Change QR Code color'
+					color={qrCodeColor}
+					callback={setQrCodeColor}
+				/>
+			</div>
 		</div>
 	);
 };
