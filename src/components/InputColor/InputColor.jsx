@@ -6,13 +6,10 @@ const InputColor = ({ label = '', color = '', callback = () => {} }) => {
 		<div className={s.input}>
 			<input
 				name='qrcodeColor'
-				id={`qrcodeColor-${label}`}
+				id={`qrcodeColor${color}`}
 				type='color'
 				value={color}
-				onChange={e => {
-					console.log(e.target.value);
-					callback(e.target.value);
-				}}
+				onChange={e => callback(e.target.value)}
 				className={s.item}
 			/>
 			<label className={s.label} htmlFor={`qrcodeColor-${label}`}>
