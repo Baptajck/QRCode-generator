@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.input {
+	margin: 3em auto;
+	width: 100%;
+	letter-spacing: 1px;
+
+	.label {
+		display: flex;
+		width: calc(100% - 1em);
+		padding-left: 0.5em;
+		color: $dark_blue;
+	}
+
+	.item {
+		background-color: #fff;
+		border: none;
+		padding: 0.5em;
+		border-radius: 5px;
+		margin-top: 0.3em;
+		color: $grayish_blue;
+		width: calc(100% - 1em);
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

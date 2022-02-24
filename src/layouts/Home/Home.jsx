@@ -1,15 +1,20 @@
 import s from './Home.module.scss';
+import { useState, useEffect } from 'react';
 import QRCode from 'react-qr-code';
 
+import Input from '../../components/Input/Input';
 const Home = () => {
+	const [value, setValue] = useState('');
+
 	return (
 		<div className={s.home}>
 			<div className={s.card}>
 				<div className={s.qrCode}>
 					<QRCode
-						value='baptjack.fr'
-						size='200'
+						value={value}
+						size={200}
 						bgColor='#2b7dfa'
+						level='H'
 						fgColor='#fff'
 					/>
 				</div>
@@ -23,6 +28,7 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
+			<Input value={value} callback={setValue} />
 		</div>
 	);
 };
